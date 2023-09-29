@@ -1,0 +1,14 @@
+name: Annotation samples
+
+on:
+  push:
+
+jobs:
+  samples:
+    name: Print samples
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::debug file=app.js,line=1::Message"
+      - run: echo "::notice file=app.js,line=1::Message"
+      - run: echo "::error file=app.js,line=1::Message"
+      - run: echo "::warning file=app.js,line=1::Message"
