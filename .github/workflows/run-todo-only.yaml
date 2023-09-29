@@ -1,4 +1,4 @@
-name: Run comment-annotator
+name: Run comment-annotator (TODO only)
 
 on:
   push:
@@ -10,3 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: joonashak/comment-annotator@main
+        with:
+          pattern: "^\\s*(//|#|\\!|'|;)\\s*(TODO).*"
