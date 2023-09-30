@@ -1,0 +1,14 @@
+name: Run comment-annotator (subdir only)
+
+on:
+  push:
+
+jobs:
+  annotate:
+    name: Annotate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: joonashak/comment-annotator@main
+        with:
+          working-dir: test-assets/services
